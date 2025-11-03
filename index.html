@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toma de Asistencias</title>
+    <link rel="stylesheet" href="styles.css?v251101-2020" />
+</head>
+
+<body>
+    <h3 style="width: 320px;">AGENDA TELEFÓNICA</h3>
+    <section id="agenda">
+        <label><b>Nombre:</b>
+            <input type="text" id="agenda_inNombre" style="width: 150px;" />
+        </label>
+        <div>
+            <button id="agenda_btAgregar">Agregar</button>
+        </div>
+    </section>
+    <section style="font-size: 10px;">
+        <h3>CONTACTOS REGISTRADOS</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 100px;">Cédula</th>
+                    <th style="width: 100px;">Nombre</th>
+                    <th style="width: 150px;">Teléfono</th>
+                </tr>
+            </thead>
+            <tbody id="agenda_divContactosRegistrados"> </tbody>
+        </table>
+    </section>
+    <script type="module">
+        import Cl_index from "./dist/Cl_index.js";
+        new Cl_index()
+    </script>
+</body>
+
+</html>
