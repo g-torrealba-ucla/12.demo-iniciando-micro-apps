@@ -2,7 +2,6 @@
  * Una aplicación que sirva para guardar los contactos de personas.
  * Debe permitir añadir un nuevo contacto.
  * Cada contacto tiene una cédula, nombre y un teléfono.
- * Debe permitir buscar por operadora telefónica (Movistar, Digitel, Movilnet).
  * Debe permitir buscar por número agenda de teléfono.
  */
 
