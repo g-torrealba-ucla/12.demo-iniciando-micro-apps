@@ -4,23 +4,22 @@ export default class Cl_vEquipos extends Cl_vGeneral {
         super({ formName: "agenda" });
         this.inNombre = this.crearHTMLInputElement("inNombre", {
             refresh: () => { },
-            oninput: () => this.actualizarContactosRegistrados(),
+            oninput: () => this.mostrarContactosRegistrados(),
         });
         this.btAgregar = this.crearHTMLButtonElement("btAgregar", {
             onclick: () => this.agregarContacto(),
         });
         this.divContactosRegistrados = this.crearHTMLElement("divContactosRegistrados", {
             type: tHTMLElement.CONTAINER,
-            refresh: () => this.actualizarContactosRegistrados(),
+            refresh: () => this.mostrarContactosRegistrados(),
         });
     }
     get nombre() {
         return this.inNombre.value.trim();
     }
-    actualizarContactosRegistrados() {
-        var _a;
+    mostrarContactosRegistrados() {
         this.divContactosRegistrados.innerHTML = "";
-        let contactos = ((_a = this.controlador) === null || _a === void 0 ? void 0 : _a.contactosRegistrados()) || [];
+        let contactos = this.controlador.contactosRegistrados();
         contactos = contactos.filter((contacto) => {
             return contacto.nombre.toLowerCase().includes(this.nombre.toLowerCase());
         });

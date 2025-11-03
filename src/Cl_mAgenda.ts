@@ -1,6 +1,5 @@
 import { iContacto } from "./Cl_mContacto.js";
 import Cl_mContacto from "./Cl_mContacto.js";
-import { dtContactos } from "./data/dtContactos.js";
 interface iResultObjects {
   objects: [iContacto] | null;
   error: string | false;
@@ -20,10 +19,6 @@ export default class Cl_mAgenda {
   constructor() {
     this.agenda = [];
   }
-  contacto(cedula: number): Cl_mContacto | null {
-    return this.agenda.find((contacto) => contacto.cedula === cedula) || null;
-  }
-
   agregarContacto({ contactoData, callback }: iAgregarContacto): void {
     let contacto = new Cl_mContacto(contactoData);
     if (contacto.contactoError()) {
